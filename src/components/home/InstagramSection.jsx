@@ -9,7 +9,7 @@ const images = [
   { src: "/images/home-section/mountain-helicopter.jpg", title: "Aerial View of Nepal" },
   { src: "/images/home-section/everest-base-camp.jpg", title: "Mountain Valleys" },
   { src: "/images/muktinath-pilgrimage/mustang.jpg", title: "Walking Through Mustang" },
-  { src: "/images/home-section/gokyo-Valley.jpg", title: "Snow Peaks Journey" },
+  { src: "/images/home-section/Gokyo-Valley.jpg", title: "Snow Peaks Journey" },
 ];
 
 export default function InstagramSection() {
