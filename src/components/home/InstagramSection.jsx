@@ -5,11 +5,11 @@ import Image from "next/image";
 
 const images = [
   { src: "/images/charter.png", title: "Flying Above the Glaciers" },
-  { src: "/images/The-heli.jpg", title: "Landing in the Himalayas" },
-  { src: "/images/nepal-is-a-beautiful.jpg", title: "Aerial View of Nepal" },
-  { src: "/images/mountain-villages.jpg", title: "Mountain Valleys" },
-  { src: "/images/Worlds-highest.jpg", title: "Walking Through Mustang" },
-  { src: "/images/Gokyo-Valley.jpg", title: "Snow Peaks Journey" },
+  { src: "/images/fleet/The-heli.jpg", title: "Landing in the Himalayas" },
+  { src: "/images/home-section/mountain-helicopter.jpg", title: "Aerial View of Nepal" },
+  { src: "/images/home-section/everest-base-camp.jpg", title: "Mountain Valleys" },
+  { src: "/images/muktinath-pilgrimage/mustang.jpg", title: "Walking Through Mustang" },
+  { src: "/images/home-section/gokyo-Valley.jpg", title: "Snow Peaks Journey" },
 ];
 
 export default function InstagramSection() {

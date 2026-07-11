@@ -55,9 +55,8 @@ export default function CTA() {
       className="relative flex min-h-[620px] w-full items-center justify-center overflow-hidden bg-[#0d1a2d]"
     >
       <div
-        className={`absolute inset-0 bg-cover bg-[center_40%] transition-transform duration-[1800ms] [transition-timing-function:cubic-bezier(0.16,1,0.3,1)] ${
-          visible ? "scale-100" : "scale-[1.06]"
-        }`}
+        className={`absolute inset-0 bg-cover bg-[center_40%] transition-transform duration-[1800ms] [transition-timing-function:cubic-bezier(0.16,1,0.3,1)] ${visible ? "scale-100" : "scale-[1.06]"
+          }`}
         style={{ backgroundImage: "url('/images/himalayan.jpg')" }}
       />
 
@@ -65,9 +64,8 @@ export default function CTA() {
 
       <div className="relative z-[2] max-w-[820px] px-6 pb-24 pt-20 text-center">
         <div
-          className={`mb-8 flex items-center justify-center gap-4 transition-all duration-700 delay-100 ${
-            visible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
-          }`}
+          className={`mb-8 flex items-center justify-center gap-4 transition-all duration-700 delay-100 ${visible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
+            }`}
         >
           <span className="h-px w-9 bg-[#f5a623]/80" />
           <span className="font-manrope text-[0.72rem] font-medium uppercase tracking-[0.22em] text-[#f5a623]">
@@ -77,9 +75,8 @@ export default function CTA() {
         </div>
 
         <h2
-          className={`mb-6 font-fraunces text-[clamp(3.4rem,6vw,3.8rem)] font-extrabold leading-[1.05] text-white transition-all duration-[850ms] delay-[280ms] [transition-timing-function:cubic-bezier(0.16,1,0.3,1)] ${
-            visible ? "translate-y-0 opacity-100" : "translate-y-9 opacity-0"
-          }`}
+          className={`mb-6 font-fraunces text-[clamp(3.4rem,6vw,3.8rem)] font-extrabold leading-[1.05] text-white transition-all duration-[850ms] delay-[280ms] [transition-timing-function:cubic-bezier(0.16,1,0.3,1)] ${visible ? "translate-y-0 opacity-100" : "translate-y-9 opacity-0"
+            }`}
         >
           Plan Your
           <br />
@@ -87,18 +84,16 @@ export default function CTA() {
         </h2>
 
         <p
-          className={`mx-auto mb-10 max-[560px] font-manrope text-[clamp(0.9rem,1.6vw,1.05rem)] font-light leading-[1.75] text-white/65 transition-all duration-700 delay-[480ms] ${
-            visible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
-          }`}
+          className={`mx-auto mb-10 max-[560px] font-manrope text-[clamp(0.9rem,1.6vw,1.05rem)] font-light leading-[1.75] text-white/65 transition-all duration-700 delay-[480ms] ${visible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+            }`}
         >
-          Let us know where you would like to fly: Everest, Annapurna, Langtang, Muktinath, Mustang, or an individualized Himalayas flight plan. 
+          Let us know where you would like to fly: Everest, Annapurna, Langtang, Muktinath, Mustang, or an individualized Himalayas flight plan.
           We will assist in creating a safe and enjoyable experience that fits your schedule.
         </p>
 
         <div
-          className={`flex flex-col items-center justify-center gap-3 transition-all duration-700 delay-[650ms] sm:flex-row ${
-            visible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
-          }`}
+          className={`flex flex-col items-center justify-center gap-3 transition-all duration-700 delay-[650ms] sm:flex-row ${visible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
+            }`}
         >
           <a
             href="/contact"
@@ -117,10 +112,10 @@ export default function CTA() {
             <span className="absolute inset-0 z-0 -translate-x-[101%] bg-white transition-transform duration-500 [transition-timing-function:cubic-bezier(0.4,0,0.2,1)] group-hover:translate-x-0" />
 
             <span className="relative z-10 flex items-center gap-2 transition-colors duration-300 group-hover:text-[#06203c]">
-          <WhatsappIcon />
-            Chat on WhatsApp
-          </span>
-        </a>
+              <WhatsappIcon />
+              Chat on WhatsApp
+            </span>
+          </a>
         </div>
       </div>
 

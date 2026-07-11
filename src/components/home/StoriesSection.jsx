@@ -9,42 +9,42 @@ const stories = [
     title: "The Sacred Heights: Muktinath Temple by Helicopter",
     date: "23 February 2025",
     read: "8 min read",
-    image: "/images/Image _BufferCTA_Section.png",
+    image: "/images/muktinath-pilgrimage/muktinath.jpg",
   },
   {
     category: "DESTINATION",
-    title: "The Sacred Heights: Muktinath Temple by Helicopter",
+    title: "Muktinath and Mustang From Above",
     date: "23 February 2025",
     read: "5 min read",
-    image: "/images/Image _BufferCTA_Section.png",
+    image: "/images/muktinath-pilgrimage/mustang.jpg",
   },
   {
     category: "DESTINATION",
-    title: "The Sacred Heights: Muktinath Temple by Helicopter",
+    title: "Everest Base Camp Helicopter Tour",
     date: "23 February 2025",
     read: "9 min read",
-    image: "/images/Image _BufferCTA_Section.png",
+    image: "/images/everest-base-camp/everest-base-camp.jpg",
   },
   {
     category: "TRAVEL",
     title: "Flying Above the Himalayas",
     date: "24 February 2025",
     read: "6 min read",
-    image: "/images/Image _BufferCTA_Section.png",
+    image: "/images/fleet/The-heli.jpg",
   },
   {
     category: "ADVENTURE",
-    title: "Everest Base Camp Helicopter Tour",
+    title: "Gokyo Valley From the Sky",
     date: "25 February 2025",
     read: "7 min read",
-    image: "/images/Image _BufferCTA_Section.png",
+    image: "/images/home-section/Gokyo-Valley.jpg",
   },
   {
     category: "GUIDE",
     title: "Best Time for Helicopter Tours in Nepal",
     date: "26 February 2025",
     read: "4 min read",
-    image: "/images/Image _BufferCTA_Section.png",
+    image: "/images/home-section/mountain-helicopter.jpg",
   },
 ];
 
@@ -80,16 +80,16 @@ export default function StoriesSection() {
           {visibleStories.map((story, index) => (
             <article
               key={index}
-              className="group cursor-pointer overflow-hidden bg-[#0b2233] transition duration-300  hover:bg-[#103048]" >  
+              className="group cursor-pointer overflow-hidden bg-[#0b2233] transition duration-300  hover:bg-[#103048]" >
               <div className="relative h-52 overflow-hidden sm:h-48 md:h-52">
                 <Image
                   src={story.image}
                   alt={story.title}
                   fill
 
-                   style={{ filter: "brightness(1.3)" }}
+                  style={{ filter: "brightness(1.3)" }}
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 35vw"
-                  className="object-cover opacity-80 transition duration-500  group-hover:opacity-100"/> 
+                  className="object-cover opacity-80 transition duration-500  group-hover:opacity-100" />
 
                 <span className="absolute left-4 top-4 bg-[#d5a033] px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-[#071825]">
                   {story.category}
