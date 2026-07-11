@@ -27,8 +27,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    ".next/dev/types/**/*.ts",
-    "**/*.mts"
-, "src/components/tours/langtang-valley/StateSection.jsx"  ],
+    "**/*.mts",
+    "src/components/tours/langtang-valley/StateSection.jsx"
+  ],
   "exclude": ["node_modules"]
 }
