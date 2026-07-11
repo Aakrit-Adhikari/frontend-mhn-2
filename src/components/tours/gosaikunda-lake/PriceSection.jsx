@@ -1,0 +1,194 @@
+"use client";
+
+const plans = [
+  {
+    title: "Shared Seat",
+    subtitle: "Join a scheduled early-morning departure",
+    price: "$300",
+    unit: "per person",
+    button: "Book Shared Seat",
+    href: "/contact",
+    featured: false,
+    features: [
+      "Round-trip Airbus H125 helicopter flight",
+      "Hotel pickup and drop-off in Kathmandu",
+      "Airport assistance and pre-flight safety briefing",
+      "Scenic flight over Shivapuri and the Langtang region",
+      "Landing near Gosaikunda Lake at 4,380m",
+      "Approximately 30–40 minutes of ground time",
+      "Langtang National Park entry permit",
+      "Emergency oxygen and first-aid kit onboard",
+    ],
+  },
+  {
+    title: "Private Charter",
+    subtitle: "Reserve the complete helicopter for your group",
+    price: "$1,500",
+    unit: "per helicopter",
+    button: "Charter the Helicopter",
+    href: "/charter",
+    featured: true,
+    features: [
+      "Everything included with a shared seat",
+      "Private Airbus H125 for your group",
+      "Flexible departure time where possible",
+      "Dedicated ground operations coordinator",
+      "Private scenic flight over the Langtang region",
+      "Gosaikunda Lake landing when conditions permit",
+      "Approximately 30–40 minutes at the sacred lake",
+      "Up to 4 passengers in the complete aircraft",
+      "Private safety briefing for your group",
+      "Priority weather-rescheduling assistance",
+    ],
+  },
+];
+
+function PriceCard({ plan }) {
+  return (
+    <div
+      className={`group relative flex min-h-[620px] w-full max-w-[430px] flex-col overflow-visible border bg-white px-6 py-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_28px_70px_rgba(0,51,102,0.16)] sm:px-8 sm:py-10 ${
+        plan.featured
+          ? "border-[#F2B632] hover:border-[#003366]"
+          : "border-[#e1e8ef] hover:border-[#F2B632]"
+      }`}
+    >
+      {/* HOVER TOP LINE */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-[#F2B632] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+
+      {/* HOVER GLOW */}
+      <div className="pointer-events-none absolute -right-16 -top-16 h-36 w-36 rounded-full bg-[#F2B632]/10 opacity-0 blur-2xl transition-all duration-700 group-hover:opacity-100 sm:-right-20 sm:-top-20 sm:h-40 sm:w-40" />
+
+      {/* FEATURED BADGE */}
+      {plan.featured && (
+        <div className="absolute left-1/2 top-0 z-20 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap bg-[#F2B632] px-5 py-2 font-manrope text-[9px] font-extrabold uppercase tracking-[0.2em] text-[#003366] transition-all duration-500 group-hover:bg-[#003366] group-hover:text-white sm:px-7 sm:py-[10px] sm:text-[10px] sm:tracking-[0.24em]">
+          Most Exclusive
+        </div>
+      )}
+
+      {/* TITLE */}
+      <h3
+        className={`relative z-10 font-fraunces text-[25px] font-semibold leading-none transition-all duration-500 group-hover:translate-x-1 sm:text-[27px] ${
+          plan.featured ? "text-[#F2B632]" : "text-[#003366]"
+        }`}
+      >
+        {plan.title}
+      </h3>
+
+      {/* SUBTITLE */}
+      <p
+        className={`relative z-10 mt-3 min-h-[48px] font-manrope text-[13px] leading-6 transition-colors duration-500 sm:text-[14px] ${
+          plan.featured ? "text-[#7b8795]" : "text-[#F2B632]"
+        }`}
+      >
+        {plan.subtitle}
+      </p>
+
+      {/* PRICE */}
+      <div className="relative z-10 mt-7 flex flex-wrap items-end gap-3">
+        <span className="mb-[7px] font-manrope text-[11px] font-bold uppercase tracking-[0.12em] text-[#7b8795]">
+          From
+        </span>
+
+        <span className="font-fraunces text-[40px] font-semibold leading-none tracking-[-0.04em] text-[#003366] transition-all duration-500 group-hover:text-[#F2B632] sm:text-[44px]">
+          {plan.price}
+        </span>
+
+        <span className="mb-[7px] font-manrope text-[12px] text-[#7b8795]">
+          {plan.unit}
+        </span>
+      </div>
+
+      {/* DIVIDER */}
+      <div className="relative z-10 mt-7 h-px w-full bg-[#e8edf2] transition-colors duration-500 group-hover:bg-[#F2B632]/40" />
+
+      {/* FEATURES */}
+      <ul className="relative z-10 mt-6 flex-1 space-y-[14px] sm:space-y-[15px]">
+        {plan.features.map((feature) => (
+          <li
+            key={feature}
+            className="flex gap-3 font-manrope text-[13px] leading-[1.5] text-[#6f7c8d] sm:text-[14px]"
+          >
+            <span className="mt-[1px] shrink-0 text-[14px] font-bold text-[#F2B632] transition-transform duration-300 group-hover:scale-125">
+              ✓
+            </span>
+
+            <span>{feature}</span>
+          </li>
+        ))}
+      </ul>
+
+      {/* BUTTON */}
+      <a
+        href={plan.href}
+        className={`relative z-10 mt-8 flex h-[52px] w-full items-center justify-center px-4 text-center font-manrope text-[10px] font-extrabold uppercase tracking-[0.14em] transition-all duration-300 sm:text-[11px] sm:tracking-[0.18em] ${
+          plan.featured
+            ? "bg-[#F2B632] text-[#003366] hover:bg-[#003366] hover:text-white"
+            : "border border-[#003366] text-[#003366] hover:bg-[#003366] hover:text-white"
+        }`}
+      >
+        {plan.button}
+
+        {plan.featured && (
+          <span className="ml-2 text-[16px] transition-transform duration-300 group-hover:translate-x-1">
+            →
+          </span>
+        )}
+      </a>
+    </div>
+  );
+}
+
+export default function PriceSection() {
+  return (
+    <section
+      id="pricing"
+      className="scroll-mt-36 w-full overflow-hidden bg-[#f4f8fc] px-5 py-16 sm:px-6 sm:py-20 md:px-10 lg:py-[88px]"
+    >
+      <div className="mx-auto w-full max-w-[940px]">
+        {/* SECTION HEADING */}
+        <div className="text-center">
+          <div className="mb-5 flex items-center justify-center gap-3">
+            <span className="h-px w-5 bg-[#F2B632]" />
+
+            <p className="font-manrope text-[10px] font-bold uppercase tracking-[0.35em] text-[#F2B632] sm:tracking-[0.42em]">
+              Fares
+            </p>
+          </div>
+
+          <h2 className="font-fraunces text-[36px] font-semibold leading-[1.05] tracking-[-0.03em] text-[#003366] sm:text-[44px] md:text-[52px]">
+            Two ways to visit
+            <br />
+            Gosaikunda Lake
+          </h2>
+
+          <p className="mx-auto mt-5 max-w-[680px] font-manrope text-[14px] leading-7 text-[#7b8795] sm:text-[15px]">
+            Join a scheduled shared-seat departure or reserve the entire
+            helicopter for a private pilgrimage and scenic journey to
+            Gosaikunda.
+          </p>
+        </div>
+
+        {/* PRICING CARDS */}
+        <div className="mt-14 grid grid-cols-1 justify-items-center gap-8 md:grid-cols-2 md:items-stretch md:gap-6">
+          {plans.map((plan) => (
+            <PriceCard key={plan.title} plan={plan} />
+          ))}
+        </div>
+
+        {/* EXCLUSION NOTE */}
+        <p className="mt-8 text-center font-manrope text-[12px] leading-6 text-[#7b8795] sm:text-[13px]">
+          Fares exclude: Personal travel insurance · Additional meals ·
+          Personal expenses · Gratuities
+        </p>
+
+        {/* OPERATIONAL NOTE */}
+        <p className="mx-auto mt-3 max-w-3xl text-center font-manrope text-[11px] leading-5 text-[#9aa4af]">
+          Shared seats generally range from USD 300–400 per passenger, while
+          private charters generally range from USD 1,500–1,800. The final fare
+          depends on passenger weight, group size, aircraft availability,
+          weather and the services confirmed in your booking.
+        </p>
+      </div>
+    </section>
+  );
+}
